@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Ashish-Chaudhary.github.io/static/css/main.073c9b0a.css",
+    "main.js": "/Ashish-Chaudhary.github.io/static/js/main.3e8b2d3c.js",
+    "static/js/787.924726a2.chunk.js": "/Ashish-Chaudhary.github.io/static/js/787.924726a2.chunk.js",
+    "index.html": "/Ashish-Chaudhary.github.io/index.html",
+    "main.073c9b0a.css.map": "/Ashish-Chaudhary.github.io/static/css/main.073c9b0a.css.map",
+    "main.3e8b2d3c.js.map": "/Ashish-Chaudhary.github.io/static/js/main.3e8b2d3c.js.map",
+    "787.924726a2.chunk.js.map": "/Ashish-Chaudhary.github.io/static/js/787.924726a2.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.3e8b2d3c.js"
+  ]
+}

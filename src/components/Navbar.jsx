@@ -10,17 +10,25 @@ import {
   useDisclosure,
   Drawer,
   DrawerOverlay,
-  DrawerBody,
   DrawerContent,
 } from "@chakra-ui/react";
 import React from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { NavHashLink } from "react-router-hash-link";
 
 const Navbar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [placement, setPlacement] = React.useState("top");
   return (
-    <Flex minWidth="max-content" alignItems="center" gap="2" bg="teal.300">
+    <Flex minWidth="max-content" alignItems="center" gap="2" bg="teal.300" h={{
+      md:"4rem"
+    }} 
+    
+    justifyContent={{
+      sm:"center",
+      md:"center"
+    }}
+    >
       <Box
         p="2"
         visibility={{
@@ -39,22 +47,29 @@ const Navbar = () => {
             sm: "none",
             md: "flex",
           }}
+         
         >
-          <Button colorScheme="teal" variant="outline">
-            Home
-          </Button>
-          <Button colorScheme="teal" variant="outline">
-            About
-          </Button>
-          <Button colorScheme="teal" variant="outline">
-            Skills
-          </Button>
-          <Button colorScheme="teal" variant="outline">
-            Projects
-          </Button>
-          <Button colorScheme="teal" variant="outline">
-            Contacts
-          </Button>
+          <NavHashLink to="#home">
+            <Button colorScheme="teal" variant="outline">
+              Home
+            </Button>
+          </NavHashLink>
+
+          <NavHashLink to="#skills">
+            <Button colorScheme="teal" variant="outline">
+              Skills
+            </Button>
+          </NavHashLink>
+          <NavHashLink to="#projects">
+            <Button colorScheme="teal" variant="outline">
+              Projects
+            </Button>
+          </NavHashLink>
+          <NavHashLink to="#contact">
+            <Button colorScheme="teal" variant="outline">
+              Contacts
+            </Button>
+          </NavHashLink>
         </ButtonGroup>
       </Show>
       <Box
@@ -74,24 +89,30 @@ const Navbar = () => {
         </Button>
         <Drawer placement={placement} onClose={onClose} isOpen={isOpen}>
           <DrawerOverlay />
-          <DrawerContent>
-            <DrawerBody>
-              <Button colorScheme="teal" variant="outline">
+          <DrawerContent textAlign="center" >
+            <NavHashLink to="#home" >
+              <Button colorScheme="teal" variant="outline" w="100%">
                 Home
               </Button>
-              <Button colorScheme="teal" variant="outline">
-                About
-              </Button>
-              <Button colorScheme="teal" variant="outline">
+            </NavHashLink>
+
+            <NavHashLink to="#skills">
+              <Button colorScheme="teal" variant="outline"w="100%">
                 Skills
               </Button>
-              <Button colorScheme="teal" variant="outline">
+            </NavHashLink>
+
+            <NavHashLink to="#projects">
+              <Button colorScheme="teal" variant="outline"w="100%">
                 Projects
               </Button>
-              <Button colorScheme="teal" variant="outline">
+            </NavHashLink>
+
+            <NavHashLink to="#contact">
+              <Button colorScheme="teal" variant="outline"w="100%">
                 Contacts
               </Button>
-            </DrawerBody>
+            </NavHashLink>
           </DrawerContent>
         </Drawer>
       </Box>

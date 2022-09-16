@@ -1,4 +1,4 @@
-import { Box, Flex, Heading, Icon, Spacer } from "@chakra-ui/react";
+import { Box, Flex, Heading, Icon, Spacer, VStack } from "@chakra-ui/react";
 import { MdCheckCircle } from "react-icons/md";
 import React from "react";
 import { AiFillHtml5 } from "react-icons/ai";
@@ -11,16 +11,20 @@ const Skills = () => {
     return <Icon as={MdCheckCircle} />;
   }
   return (
-    <Box
+    <VStack
       h={{
         base: "auto",
         sm: "auto",
-        md: "100vh",
+        md: "auto",
       }}
-      p="20px"
+      p="2rem"
+      w="90%"
+      m="1.5rem auto"
+      bg="whitesmoke"
     >
       <Heading>Skills</Heading>
       <Flex
+        gap="2rem"
         justifyContent={{
           base: "center",
           sm: "center",
@@ -68,6 +72,7 @@ const Skills = () => {
       </Flex>
 
       <Flex
+        gap="2rem"
         justifyContent={{
           base: "center",
           sm: "center",
@@ -109,11 +114,13 @@ const Skills = () => {
           fontSize="110px"
           borderRadius="7px"
           boxShadow="rgba(0, 0, 0, 0.24) 0px 3px 8px"
+          textAlign="center"
+          display="inline-block"
         >
           <BsWordpress color="#6fcad0" />
         </Box>
       </Flex>
-    </Box>
+    </VStack>
   );
 };
 

@@ -9,6 +9,7 @@ const AllRoutes = () => {
     <>
       <Home />
       <Skills />
+
       <Projects />
       <Contact />
     </>
